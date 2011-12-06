@@ -6,6 +6,7 @@ documentation methodology.
 ## Installation
 
 Add the engine to your `Gemfile`:
+
 ```ruby
 gem "rails-styleguide"
 ```
@@ -16,9 +17,9 @@ Configure the route to the engine:
 mount Styleguide::Engine => "/styleguide"
 ```
 
-Visit http://localhost:3000/styleguide
+Visit [http://localhost:3000/styleguide](http://localhost:3000/styleguide)
 
-Customize app/views/styleguide/index.html.erb to build your own
-styleguide
+Override [`app/views/styleguide/index.html.erb`](https://github.com/cbeer/rails-styleguide/blob/master/app/views/styleguide/index.html.erb) in your local application to build your own
+styleguide.
 
 
