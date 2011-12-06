@@ -1,5 +1,10 @@
 class StyleguideController < ActionController::Base
-  def index
+  helper_method :stylegude
+  layout "styleguide"
 
+  def index
+    respond_to do |format|
+      format.html
+    end
   end
 end

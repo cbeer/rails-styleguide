@@ -1,3 +1,9 @@
+PATH
+  remote: ../..
+  specs:
+    styleguide (0.0.1)
+      kss
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -44,6 +50,8 @@ GEM
     hike (1.2.1)
     i18n (0.6.0)
     json (1.6.3)
+    kss (0.1.1)
+      sass (>= 3.1)
     mail (2.3.0)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -105,4 +113,5 @@ DEPENDENCIES
   coffee-rails (~> 3.1.1)
   rails (= 3.1.2)
   sass-rails (~> 3.1.5.rc.2)
+  styleguide!
   uglifier (>= 1.0.3)

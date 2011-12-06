@@ -1,3 +1,3 @@
 Styleguide::Engine.routes.draw do
-  match "/" => "styleguide#index"
+  root :to => "styleguide#index"
 end

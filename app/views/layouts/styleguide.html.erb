@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Styleguide Example</title>
+  <%= stylesheet_link_tag :application %>
+  <%= stylesheet_link_tag :styleguide %>
+  <%= javascript_include_tag :styleguide %>
+</head>
+<body>
+
+  <header>
+    Styleguide Example
+  </header>
+
+  <div id="wrapper">
+
+    <%= yield %>
+
+  </div><!-- /#wrapper -->
+
+</body>
+</html>
+
