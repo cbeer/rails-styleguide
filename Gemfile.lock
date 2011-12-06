@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    styleguide (0.0.1)
+    rails-styleguide (0.0.1)
       kss
 
 GEM
@@ -146,8 +146,8 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 3.1.1)
   rails (= 3.1.2)
+  rails-styleguide!
   rspec
   rspec-rails
   sass-rails (~> 3.1.5.rc.2)
-  styleguide!
   uglifier (>= 1.0.3)
