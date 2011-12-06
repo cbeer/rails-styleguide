@@ -2,8 +2,8 @@ $:.push File.expand_path("../lib", __FILE__)
 require 'styleguide/version'
 
 Gem::Specification.new do |s|
-  s.name = "styleguide"
-  s.summary = "Insert Styleguide summary."
+  s.name = "rails-styleguide"
+  s.summary = "Rails engine that implements the Knyle Style Sheets styleguide"
   s.authors = ["Chris Beer"]
   s.description = "Insert Styleguide description."
   s.files         = `git ls-files`.split("\n")
