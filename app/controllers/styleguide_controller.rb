@@ -43,7 +43,7 @@ class StyleguideController < ActionController::Base
   # Get the Kss-parsed styleguide
   def styleguide id
     path = stylesheets_path(id)
-    @styleguide = Kss::Parser.new(path)
+    Kss::Parser.new(path)
   end
   memoize :styleguide
 
