@@ -35,7 +35,7 @@ class StyleguideController < ActionController::Base
   # Return the directory path for a given path id
   def stylesheets_path id
     config = self.class.config.stylesheets_path[id.to_sym]
-    raise RoutingError unless config
+    raise ActionController::RoutingError.new('Not Found') unless config
     config
   end
 
