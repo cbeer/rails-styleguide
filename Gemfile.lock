@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rails-styleguide (0.0.2)
+    rails-styleguide (0.0.3)
       kss
 
 GEM
