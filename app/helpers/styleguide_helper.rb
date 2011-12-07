@@ -1,4 +1,6 @@
 module StyleguideHelper
+  ##
+  # Render a styleguide block
   def styleguide_block section, styleguide = @styleguide, &block
     section = styleguide.section section
 
