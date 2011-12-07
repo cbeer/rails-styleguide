@@ -21,7 +21,9 @@ class StyleguideController < ActionController::Base
 
   protected
   def stylesheets_path id
-    self.class.config.stylesheets_path[id.to_sym]
+    config = self.class.config.stylesheets_path[id.to_sym]
+    raise RoutingError unless config
+    config
   end
 
   def styleguide id
