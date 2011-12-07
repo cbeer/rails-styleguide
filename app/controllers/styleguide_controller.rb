@@ -1,10 +1,33 @@
 class StyleguideController < ActionController::Base
-  helper_method :stylegude
+  extend ActiveSupport::Memoizable
   layout "styleguide"
 
-  def index
+  def self.initialize_stylesheets_path_config
+    self.config.stylesheets_path ||= {}
+    self.config.stylesheets_path[:default] ||= File.join(Rails.root, Rails.application.paths["app/assets"], "stylesheets")
+  end
+  self.initialize_stylesheets_path_config
+
+  def show 
+    id = params[:id]
+    id ||= :default
+
+    @styleguide = styleguide(id)
+
     respond_to do |format|
-      format.html
+      format.html { render id.to_s }
     end
   end
+
+  protected
+  def stylesheets_path id
+    self.class.config.stylesheets_path[id.to_sym]
+  end
+
+  def styleguide id
+    path = stylesheets_path(id)
+    @styleguide = Kss::Parser.new(path)
+  end
+  memoize :styleguide
+
 end
